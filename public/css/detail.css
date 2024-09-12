@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merienda:wght@400;500&family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    background: linear-gradient(to left, #ffffff, #88ceff);
+}
+:root {
+    --main-color: #b9c7f1;
+    --second-color: #ffac34;
+    --text-color: #444;
+    
+}
+
+.detail {
+display: grid;
+grid-template-columns: repeat(2 , 1fr);
+gap: 50px;
+text-align: center;
+margin: 20px;
+}
+.container .head{
+    font-size: xx-large;
+    font-weight: 800;
+    margin: 20px;
+    text-align: center;
+    
+}
+.detail .form-control img{
+    width: 100%;
+}
+.detail .form-control {
+    position: relative;
+}
+.detail .form-control::before{
+    width: 300px;
+    height: 300px;
+    content: '';
+    background-color: rgb(168, 140, 98);
+    z-index: -1;
+    border-radius: 190px 100px 170px 180px;
+    left: calc(50%-150px);
+    top: 50px;
+}
+.detail #title{
+    font-size: xx-large;
+    padding: 40px 0 0 0;
+    margin: 0 0 10px 0;
+}
+.detail #bhk,#rentType,#location{
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+.detail #price{
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 7px;
+}
+.detail .button{
+    
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.detail .button button{
+    background-color: rgb(129, 118, 104);
+    border: none;
+    padding: 15px 20px;
+    font-family: Poppins;
+    font-size: large;
+}
+.detail .button button:hover{
+    background:rgb(50, 123, 241);
+}
+.detail #descrption{
+    font-weight: 400;
+    font-size: large;
+}
