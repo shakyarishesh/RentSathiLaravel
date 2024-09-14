@@ -63,7 +63,8 @@ class RegistrationController extends Controller
         $password = $email->password;
 
         if (password_verify($request->pwd, $password)) {
-            $request->session()->put('login', $email);
+            $request->session()->put('login', $request->email);
+
             $user = User::where('email', $email->email);
             if ($user != null) {
                 return view('intro');
@@ -78,7 +79,13 @@ class RegistrationController extends Controller
 
             return view('intro');
         } else {
-            return view('login', ['message' => "email/password didnot matched"]);
+            return view('login', ['message' => "email/password didnot matched",'login'=>null]);
         }
+    }
+
+    public function logout()
+    {
+        session()->flush();
+        return view('intro');
     }
 }

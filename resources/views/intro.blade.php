@@ -14,52 +14,7 @@
             {{ $message }}
         </div>
     @endif
-    <header>
-        <a href="#" class="logo"><img src="/Images/logo.png" alt=""></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li><a href="intro.html">Home</a></li>
-            <li><a href="house.html">House</a></li>
-            <li><a href="#Flats">Flats</a></li>
-            <li><a href="#Rooms">Rooms</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <div class="header-btn">
-                <div class="search-container">
-                    <div class="search-bar">
-                        <span>Search</span> <i class="fas fa-search"></i>
-                    </div>
-                    <form action="" class="search-dropdown">
-                        <div class="input-box">
-                            <span>Location:</span>
-                            <input type="search" name="Search" id="searchplace" placeholder="Search Places">
-                        </div>
-                        <div class="input-box">
-                            <span>Type of Space:</span>
-                            <select id="dropdown" name="dropdown">
-                                <option value="option1">House</option>
-                                <option value="option2">Rooms</option>
-                                <option value="option3">Flats</option>
-                                <option value="option4">Hostel</option>
-                            </select>
-                        </div>
-                        <div class="input-box">
-                            <span>No of People:</span>
-                            <input type="number" id="quantity" name="quantity" min="1" max="">
-                        </div>
-                        <input type="submit" name="submit" id="submitbtn" class="btn">
-                    </form>
-                </div>
-            </div>
-            <div class="header-btn">
-                @if (!session()->has('login'))
-                <a href="/login" class="login">Log In</a>
-                <a href="/signup" class="signup">Sign Up</a>
-                @endif
-                
-                <a href="userprofile.html" class="signup">Profile</a>
-                <a href="upload.html" class="login">Upload</a>
-            </div>
-    </header>
+    @include('header')
     <!-- Home  -->
     <section class="home" id="home">
         <div class="slideshow">
