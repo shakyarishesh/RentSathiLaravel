@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,8 @@ Route::get('/registration/logout',[RegistrationController::class,'logout']);
 //upload
 Route::view('/upload','upload');
 Route::post('/upload/add',[UploadController::class,'upload']);
+
+//for seaching through houses/flats/rooms
+Route::get('/search/housedetail',[SearchController::class,'getRentDetailsByHouses']);
+Route::get('/search/flatdetail',[SearchController::class,'getRentDetailsByflats']);
+Route::get('/search/roomdetail',[SearchController::class,'getRentDetailsByrooms']);

@@ -7,6 +7,7 @@
     <title>Introduction page</title>
     <link rel="stylesheet" href="{{ asset('css/intro.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
 
 <body>
     @if (isset($message))
@@ -85,25 +86,33 @@
             <h1> <br> <span> Our Top Picks </span><br>Explore Our Top Deals <br><span> From Top Rated Dealers</span>
             </h1>
         </div>
-        @foreach ($rentDetails as $rent)
+
         <div class="services-container">
-            <div class="box">
-                <div class="box-img">
-                    <img src="/storage/{{$rent->image_path}}" alt="Apartment on rent">
+            @foreach ($rentDetails as $rent)
+                <div class="box">
+                    <div class="box-img">
+                        <img src="/storage/{{ $rent->image_path }}" alt="Apartment on rent">
+                    </div>
+
+                    <p>{{ $rent->created_at }}</p>
+                    @if ($rent->status == 'available')
+                        <div style="color: green;">● {{ $rent->status }}</div>
+                    @endif
+
+                    @if ($rent->status == 'pending')
+                        <div style="color: yellow;">● {{ $rent->status }}</div>
+                    @endif
+
+                    <h3>{{ $rent->title }}</h3>
+                    <h2>{{ $rent->price }}<span>/per Month</span></h2>
+                    {{ $rent->description }}
+                    <p>Location: {{ $rent->location }}</p>
+
+                    <a href="#" class="btn">Rent Now</a>
                 </div>
-                
-                    <p>{{$rent->created_at}}</p>
-                   
-                <h3>{{$rent->title}}</h3>
-                <h2>{{$rent->price}}<span>/per Month</span></h2>
-                {{$rent->description}}
-                <p>Location: {{$rent->location}}</p>
-                
-                <a href="#" class="btn">Rent Now</a>
-            </div>
         </div>
         @endforeach
-        
+
         {{-- <div class="services-container">
             <div class="box">
                 <div class="box-img">

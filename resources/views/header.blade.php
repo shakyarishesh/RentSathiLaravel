@@ -14,8 +14,8 @@
         <ul class="navbar">
             <li><a href="/">Home</a></li>
             <li><a href="/search/housedetail">House</a></li>
-            <li><a href="">Flats</a></li>
-            <li><a href="">Rooms</a></li>
+            <li><a href="/search/flatdetail">Flats</a></li>
+            <li><a href="/search/roomdetail">Rooms</a></li>
             <li><a href="">About Us</a></li>
         </ul>
         <div class="header-btn">

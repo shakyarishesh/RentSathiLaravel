@@ -13,8 +13,4 @@ class HomeController extends Controller
         return view('intro',['rentDetails'=>$data,'message']);
         // return view('intro');
     }
-    public function getRentDetails()
-    {
-       
-    }
 }
