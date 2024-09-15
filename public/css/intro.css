@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Merienda:wght@400;500&family=Poppins:wght@300;400;600;700&display=swap');
 * {
     margin: 0;
@@ -44,70 +45,8 @@ header {
     background: #d4d6dc;
 }
 .logo img {
-    width:60px;
+    width:80px;
 }
-.search-container {
-    position: relative; /* Needed for proper positioning */
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  .search-bar {
-    display: flex; /* Make search bar elements inline */
-    align-items: center;
-    padding: 10px 15px; /* Adjust padding as needed */
-    cursor: pointer; /* Indicate clickable behavior */
-    transition: background-color 0.2s ease-in-out; /* Add transition for hover effect */
-    border-radius: 0.5rem;
-    padding-top: 0px;
-  
-  }
-  
-  .search-bar span {
-    margin-right: 10px; /* Spacing between text and icon */
-    color: #333; /* Text color */
-    font-size: 1.1rem;
-    color: var(--gradient);
-    font-weight: 500;
-
-  }
-  
-  .search-dropdown {
-    display: none; /* Initially hide the dropdown content */
-    position: absolute; /* Position the content absolutely */
-    min-width: 400px; /* Set a minimum width for the dropdown */
-    min-height: 200px;
-    background-color: #d4d6dc;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a subtle shadow */
-    z-index: 1; /* Ensure the dropdown stays above other elements */
-    padding: 10px; /* Padding for the dropdown content */
-  }
- .search-dropdown .input-box {
-    flex: 1 1 7rem;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-}
-.search-dropdown .input-box span{
-    font-weight: 600;
-}
-.search-dropdown .input-box input{
-    padding: 8px;
-    outline: none;
-    border: none;
-    background: #9fa0a4;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-}
-  
-  .search-dropdown.active {  /* Styles for the opened dropdown */
-    display: block;
-  }
-  
-  .search-container:hover .search-dropdown {  /* Show dropdown on hover */
-    display: block;
-  }
-
 .navbar {
     display: flex;
 }
@@ -116,10 +55,9 @@ header {
 }
 .navbar a{
     font-size: 1.3rem;
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: var(--gradient);
     font-weight: 500;
-    margin-right: 20px;
 }
 
 .navbar a::after{
@@ -460,5 +398,3 @@ footer p {
     background-color: #007bff;
     color: #fff;
 }
-
-

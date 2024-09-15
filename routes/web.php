@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
@@ -8,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('intro');
-});
+Route::get('/',[HomeController::class,'intro']);
 
 Route::view('/signup', 'signup');
 Route::get('/registerPost',[RegistrationController::class,'register']);
@@ -24,4 +23,4 @@ Route::get('/registration/logout',[RegistrationController::class,'logout']);
 
 //upload
 Route::view('/upload','upload');
-Route::get('/upload/add',[UploadController::class,'upload']);
+Route::post('/upload/add',[UploadController::class,'upload']);

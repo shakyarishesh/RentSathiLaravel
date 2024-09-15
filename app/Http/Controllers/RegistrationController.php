@@ -48,7 +48,8 @@ class RegistrationController extends Controller
             'password' => password_hash($validatedData['confirmpassword'], PASSWORD_DEFAULT),
         ]);
 
-        return view('intro', ["message" => "Registration Successful"]);
+        return redirect('/');
+        // return view('intro', ["message" => "Registration Successful"]);
     }
 
     public function login(Request $request)
@@ -77,7 +78,7 @@ class RegistrationController extends Controller
                 ]);
             }
 
-            return view('intro');
+            return redirect('/');
         } else {
             return view('login', ['message' => "email/password didnot matched",'login'=>null]);
         }
@@ -86,6 +87,6 @@ class RegistrationController extends Controller
     public function logout()
     {
         session()->flush();
-        return view('intro');
+        return redirect('/');
     }
 }

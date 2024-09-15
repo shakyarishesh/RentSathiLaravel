@@ -16,9 +16,13 @@ class UploadController extends Controller
 
         $user = User::where('email',$email)->first();
         $user_id = $user->id;
+        $image_path = $request->file('img')->store('public');
+        $img_array = explode('/',$image_path);
+        $path = $img_array[1];
        
         $result = Rent::insert([
             "image_name"=> $data['img'],
+            "image_path"=> $path,
             "rent_type"=> $data['rentType'],
             "location"=> $data['location'],
             "property_specification"=> $data['PropertySpecification'],
@@ -31,7 +35,8 @@ class UploadController extends Controller
         ]);
         if($result)
         {
-            return view('intro',['message'=>"Uploaded Successfully"]);
+            return redirect('/');
+            // return view('intro',['message'=>"Uploaded Successfully"]);
            
         }else{
             return view('upload',['message'=>"Upload Failed"]);

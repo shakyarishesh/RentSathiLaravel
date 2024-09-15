@@ -15,7 +15,8 @@
     @endif
     <div align="center" class="container">
         <h3>Image Upload</h3>
-        <form action="/upload/add" method="get">
+        <form action="/upload/add" enctype="multipart/form-data" method="post">
+            @csrf
             <label for="Image" class="section">Image: </label> <input type="file" name="img"
                 class="form-control" /> <label for="rentType" class="section">Rent Type:</label> <select
                 class="rentType" id="rentType" name="rentType" onchange="changeRentType()">

@@ -9,10 +9,10 @@
 
 <body>
     <header>
-        <a href="#" class="logo"><img src="Images/logo.jpg" alt="logo"></a>
+        <a href="#" class="logo"><img src="Images/logo.png" alt="logo"></a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
-            <li><a href="/intro">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/search/housedetail">House</a></li>
             <li><a href="">Flats</a></li>
             <li><a href="">Rooms</a></li>
@@ -26,13 +26,14 @@
 
 
 
-            <a href="/upload" class="upload">Upload</a>
+            
 
             @if (session()->has('login')!= null && session()->get('login')=='admin@test.com')
                 <a href="/admin/index" class="upload">Admin Dashboard</a>
             @endif
 
             @if (session()->has('login') != null)
+            <a href="/upload" class="upload">Upload</a>
                 <a href="/registration/profile" class="login">Profile</a> <a href="/registration/logout"
                     class="signup">LogOut</a>
             @endif

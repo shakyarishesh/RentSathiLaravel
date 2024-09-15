@@ -85,6 +85,25 @@
             <h1> <br> <span> Our Top Picks </span><br>Explore Our Top Deals <br><span> From Top Rated Dealers</span>
             </h1>
         </div>
+        @foreach ($rentDetails as $rent)
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/storage/{{$rent->image_path}}" alt="Apartment on rent">
+                </div>
+                
+                    <p>{{$rent->created_at}}</p>
+                   
+                <h3>{{$rent->title}}</h3>
+                <h2>{{$rent->price}}<span>/per Month</span></h2>
+                {{$rent->description}}
+                <p>Location: {{$rent->location}}</p>
+                
+                <a href="#" class="btn">Rent Now</a>
+            </div>
+        </div>
+        @endforeach
+        
         {{-- <div class="services-container">
             <div class="box">
                 <div class="box-img">
