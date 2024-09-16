@@ -68,7 +68,7 @@ class RegistrationController extends Controller
 
             $user = User::where('email', $email->email);
             if ($user != null) {
-                return view('intro');
+                return redirect('/');
             } else {
                 User::insert([
                     'name' => $email->fullname,
@@ -80,7 +80,8 @@ class RegistrationController extends Controller
 
             return redirect('/');
         } else {
-            return view('login', ['message' => "email/password didnot matched",'login'=>null]);
+            return redirect('/');
+            // return view('login', ['message' => "email/password didnot matched",'login'=>null]);
         }
     }
 
@@ -88,5 +89,14 @@ class RegistrationController extends Controller
     {
         session()->flush();
         return redirect('/');
+    }
+
+    //user profile
+    public function profile()
+    {
+        $email = session()->get('login');
+        $data = Register::where('email',$email)->first();
+        // return $data;
+        return view('profile',['userDetails'=>$data ? $data:null]);
     }
 }

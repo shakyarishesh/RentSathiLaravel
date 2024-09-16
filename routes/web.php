@@ -30,3 +30,6 @@ Route::post('/upload/add',[UploadController::class,'upload']);
 Route::get('/search/housedetail',[SearchController::class,'getRentDetailsByHouses']);
 Route::get('/search/flatdetail',[SearchController::class,'getRentDetailsByflats']);
 Route::get('/search/roomdetail',[SearchController::class,'getRentDetailsByrooms']);
+
+//profile
+Route::get('/profile',[RegistrationController::class,'profile']);

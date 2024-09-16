@@ -34,7 +34,7 @@
 
             @if (session()->has('login') != null)
             <a href="/upload" class="upload">Upload</a>
-                <a href="/registration/profile" class="login">Profile</a> <a href="/registration/logout"
+                <a href="/profile" class="login">Profile</a> <a href="/registration/logout"
                     class="signup">LogOut</a>
             @endif
 

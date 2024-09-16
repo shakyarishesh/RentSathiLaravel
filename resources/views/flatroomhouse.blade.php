@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+    <section>
     @include('header')
-    
+    </section>
     <section class="services" id="service">
         <div class="services-container">
             @foreach ($rentDetails as $rent)
