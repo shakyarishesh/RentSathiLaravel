@@ -80,8 +80,8 @@ class RegistrationController extends Controller
 
             return redirect('/');
         } else {
-            return redirect('/');
-            // return view('login', ['message' => "email/password didnot matched",'login'=>null]);
+          
+            return view('login', ['message' => "email/password didnot matched",'login'=>null]);
         }
     }
 
