@@ -110,8 +110,9 @@
 
                     <a href="#" class="btn">Rent Now</a>
                 </div>
+                @endforeach
         </div>
-        @endforeach
+        
 
         {{-- <div class="services-container">
             <div class="box">
