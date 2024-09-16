@@ -33,3 +33,6 @@ Route::get('/search/roomdetail',[SearchController::class,'getRentDetailsByrooms'
 
 //profile
 Route::get('/profile',[RegistrationController::class,'profile']);
+
+//about-us page
+Route::view('/about-us','about-us');

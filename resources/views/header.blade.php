@@ -16,7 +16,7 @@
             <li><a href="/search/housedetail">House</a></li>
             <li><a href="/search/flatdetail">Flats</a></li>
             <li><a href="/search/roomdetail">Rooms</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
         </ul>
         <div class="header-btn">
             @if (session()->has('login')==null)
